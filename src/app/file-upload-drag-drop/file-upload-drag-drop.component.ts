@@ -59,7 +59,7 @@ export class FileUploadComponent implements OnInit {
       for (var j = 0; j < files.length; j++) {
         if (!this.fileList.some(x => x.name == files[j].name)) {
           this.fileList.push(files[j]);
-          this.successfiles.push("File: " + files[j].name + " Uploaded successfully.");
+          this.successfiles.push("File: " + files[j].name + " added successfully.");
         }
         else {
           this.errors.push("File: " + files[j].name + " Already added in list.");
@@ -88,7 +88,7 @@ export class FileUploadComponent implements OnInit {
       // Check the extension exists
       var exists = extensions.includes(ext);
       if (!exists) {
-        this.errors.push("Error (Extension): " + files[i].name);
+        this.errors.push("Invalid file : " + files[i].name+", Upload only "+this.fileExt+" file.");
       }
       // Check file size
       this.isValidFileSize(files[i]);

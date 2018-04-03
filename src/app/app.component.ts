@@ -24,7 +24,7 @@ export class AppComponent implements OnInit {
         // append more item in FormData and send to server
         //call service to send file on server via FormData.
         
-        // if file saved in DB
+          // if file saved in DB set true.
         //this.IsUploaded = true;
       }
     }
